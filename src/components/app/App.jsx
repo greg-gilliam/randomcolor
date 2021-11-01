@@ -1,6 +1,6 @@
 import React from 'react';
-import ColorPicker from '../../containers/RandomColor';
+import RandomColor from '../../containers/RandomColor';
 
 export default function App() {
-  return <ColorPicker />;
+  return <RandomColor />;
 }
