@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import Field from '../presentation/Field';
 
-class RandomColor extends React.Component {
+class RandomColor extends Component {
   state = {
     colors: ['red', 'blue', 'yellow', 'orange', 'purple'],
     currentColor: 'green',
   };
 
+  componentDidMount() {
+    this.colorInterval();
+  }
   colorInterval = () => {
-    const randomNumber = Math.floor(Math.random() * 4);
-    setTimeout(() => {
+    setInterval(() => {
+      const randomNumber = Math.floor(Math.random() * 4);
       this.setState({ currentColor: this.state.colors[randomNumber] });
     }, 1000);
   };
@@ -18,7 +21,7 @@ class RandomColor extends React.Component {
     return (
       <>
         <h1>This is the color randomizer!</h1>
-        <Field color={this.state.currentColor} />
+        <Field currentColor={this.state.currentColor} />
         {/* <div
           style={{
             backgroundColor: this.colorInterval(),
