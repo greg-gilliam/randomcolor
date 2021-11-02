@@ -22,14 +22,6 @@ class RandomColor extends Component {
       <>
         <h1>This is the color randomizer!</h1>
         <Field currentColor={this.state.currentColor} />
-        {/* <div
-          style={{
-            backgroundColor: this.colorInterval(),
-            height: 100,
-            width: 100,
-            marginTop: 20,
-          }}
-        ></div> */}
       </>
     );
   }
